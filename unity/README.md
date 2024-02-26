@@ -11,11 +11,11 @@ This examination evaluates your core Unity development skills and the ability to
 
 **Time Allocation**
 
-You will have [Insert Time Limit] to complete the core task. The extension task is considered a bonus demonstrating broader design thinking.
+You will have 2-3 days to complete the core task. The extension task is considered a bonus demonstrating broader design thinking.
 
 ## Core Task: API Integration Scene
 
-2.  **API Selection:**
+1.  **API Selection:**
     
     -   Choose a simple, freely accessible API that provides data suitable for display in a Unity scene. Some suggestions:
         
@@ -25,11 +25,11 @@ You will have [Insert Time Limit] to complete the core task. The extension task 
         
     -   **Document your chosen API and endpoint in this README.**
     
-4.  **Unity Scene Setup:**
+2.  **Unity Scene Setup:**
     
     -   Create a new Unity project and scene.
     
-6.  **API Interaction:**
+3.  **API Interaction:**
     
     -   Write C# scripts to:
         
@@ -38,7 +38,7 @@ You will have [Insert Time Limit] to complete the core task. The extension task 
         -   Display this fetched data in a clear and visually appealing way in your Unity scene.
         
     
-8.  **Error Handling:**
+4.  **Error Handling:**
     
     -   Implement basic error handling for:
         
