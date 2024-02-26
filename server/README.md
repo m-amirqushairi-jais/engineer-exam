@@ -26,7 +26,7 @@ You will have approximately [Insert Time Limit] to complete the following tasks.
 
 Create a Docker container using your preferred language (Node.js or C#) for the Azure Function task. The container will perform version and configuration management.
 
-2.  **Project Setup:**
+1.  **Project Setup:**
     
     -   Create a new project directory.
     -   Include either a `package.json` (Node.js) or an appropriate C# project structure.
@@ -41,12 +41,8 @@ Create a Docker container using your preferred language (Node.js or C#) for the 
         
         ```
         
-        Use code  [with caution.](https://gemini.google.com/faq#coding)
-        
-        content_copy
-        
     
-4.  **Script Functionality:**
+2.  **Script Functionality:**
     
     -   Write a script (`index.js` for Node.js or equivalent for C#) to:
         
@@ -59,11 +55,11 @@ Create a Docker container using your preferred language (Node.js or C#) for the 
             
         
     
-6.  **Dockerfile:**
+3.  **Dockerfile:**
     
     -   Create a `Dockerfile` using the appropriate base image. Include instructions to copy project files, install dependencies, and define the default command that runs your script.
     
-8.  **Build and Test**
+4.  **Build and Test**
     
     -   Build the image with a tag like `server-exam-tools`.
     -   Test the image with various command-line arguments to ensure all functionality works.
