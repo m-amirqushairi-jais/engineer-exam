@@ -20,7 +20,7 @@ This examination is designed to evaluate your skills in containerization with Do
 
 **Time Allocation:**
 
-You will have approximately [Insert Time Limit] to complete the following tasks. Prioritize core functionality, but strive to demonstrate your broader understanding of cloud concepts.
+You will have approximately 1-2 days to complete the following tasks. Prioritize core functionality, but strive to demonstrate your broader understanding of cloud concepts.
 
 ## Task 1: Versioning and Configuration with Docker
 
