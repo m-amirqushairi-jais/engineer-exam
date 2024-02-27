@@ -1,6 +1,6 @@
 
 # Client Engineer Examination: Unity and API Integration
-> Created By Muhammad Amir Qushairi Jais
+> Created By Muhammad Amir Qushairi Jais & Sharif Tariq
 
 This examination evaluates your core Unity development skills and the ability to integrate external data sources using APIs.
 
@@ -11,7 +11,7 @@ This examination evaluates your core Unity development skills and the ability to
     -   Choose a simple, freely accessible API that provides data suitable for display in a Unity scene. Some suggestions:
         
         -   Weather API (e.g., OpenWeatherMap:  [https://openweathermap.org/api](https://openweathermap.org/api))
-        -   Random Quote API (e.g., They Said So: [invalid URL removed])
+        -   Waktu Solat API ([https://api.waktusolat.app/](https://api.waktusolat.app/))
         -   Public dataset API (e.g., NASA Open APIs:  [https://api.nasa.gov/](https://api.nasa.gov/))
         
     -   **Document your chosen API and endpoint in this README.**
