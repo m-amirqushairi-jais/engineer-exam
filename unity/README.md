@@ -12,8 +12,10 @@
 You will have 2-3 days to complete the core task. The extension task is considered a bonus demonstrating broader design thinking.
 
 ## Task 1: API Integration Scene
+[Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-1)
 
 ## Task 2: Spirograph
+[Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-2)
 
 **Additional Notes**
 
