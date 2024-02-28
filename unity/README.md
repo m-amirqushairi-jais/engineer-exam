@@ -17,6 +17,9 @@ You will have 2-3 days to complete the core task. The extension task is consider
 ## Task 2: Spirograph
 [Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-2)
 
+## Task 2: MLRS vs CIWS
+[Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-3)
+
 **Additional Notes**
 
 -   You are free to use relevant Unity Asset Store packages or libraries you are familiar with. Please list any significant dependencies used within this README.
