@@ -17,7 +17,7 @@ You will have 2-3 days to complete the core task. The extension task is consider
 ## Task 2: Spirograph
 [Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-2)
 
-## Task 2: MLRS vs CIWS
+## Task 3: MLRS vs CIWS
 [Link](https://github.com/m-amirqushairi-jais/engineer-exam/tree/main/unity/task-3)
 
 **Additional Notes**
