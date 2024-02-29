@@ -16,6 +16,7 @@ This examination is designed to evaluate your skills in containerization with Do
     
     -   Use your personal Azure subscription.
     -   Request temporary access credentials from the examiner.
+    -   Or just use In-Memory is enough
     
 
 **Time Allocation:**
@@ -67,7 +68,7 @@ Create a Docker container using your preferred language (Node.js or C#) for the 
 
 ## Task 2: Azure Function Development
 
-Develop an Azure Function using HTTP triggers in your chosen language (Node.js or C#).
+Develop an Azure Function using HTTP triggers in C#.
 
 **Option 1: Calculator Service**
 
@@ -100,7 +101,7 @@ Develop an Azure Function using HTTP triggers in your chosen language (Node.js o
     
 -   **Extension - Blob Storage:**
     
-    -   Integrate with Azure Blob Storage (Azurite for local or a provided Azure account).
+    -   Integrate with Azure Blob Storage (Azurite for local or a provided Azure account or In-Memory).
     -   Serialize ToDo items (JSON) and store them in a Blob container for every creation, update, and deletion operation.
     
 
