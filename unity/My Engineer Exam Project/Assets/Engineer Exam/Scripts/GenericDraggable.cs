@@ -1,17 +1,15 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-// using TMPro;
-// using DG.Tweening;
 
-namespace Classroom.NewUtil
+namespace EngineerExam.Utilities
 {
     [RequireComponent(typeof(CanvasGroup))]
     public class GenericDraggable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public static GenericDraggable activeDraggable;
         public int draggableMatchID;
-        public RectTransform spawnArea; // I should be assigned by GameManager during spawn
+        public RectTransform spawnArea; // this should be assigned by GameManager during spawn
         public bool returnToOriginOnFalse;
         // public TextMeshProUGUI label;
         private Image myImage;
@@ -22,7 +20,7 @@ namespace Classroom.NewUtil
         private RectTransform _rectTransform;
         private Rigidbody2D _rigidbody2D;
         private CapsuleCollider2D _collider2D;
-        private CanvasGroup canvasGroup
+        private CanvasGroup MyCanvasGroup
         {
             get
             {
@@ -30,7 +28,7 @@ namespace Classroom.NewUtil
                 return _canvasGroup;
             }
         }
-        public RectTransform rectTransform
+        public RectTransform MyRectTransform
         {
             get
             {
@@ -38,7 +36,7 @@ namespace Classroom.NewUtil
                 return _rectTransform;
             }
         }
-        private new Rigidbody2D rigidbody2D
+        private new Rigidbody2D MyRigidbody2D
         {
             get
             {
@@ -46,7 +44,7 @@ namespace Classroom.NewUtil
                 return _rigidbody2D;
             }
         }
-        private new CapsuleCollider2D collider2D
+        private new CapsuleCollider2D MyCollider2D
         {
             get
             {
@@ -63,51 +61,28 @@ namespace Classroom.NewUtil
         void Awake()
         {
             myImage = this.GetComponent<Image>();
-            originalPos = rectTransform.localPosition;
+            originalPos = MyRectTransform.localPosition;
             transform.localScale = Vector3.zero;
         }
 
         public void ShowUp()
         {
-            originalPos = rectTransform.localPosition;
+            originalPos = MyRectTransform.localPosition;
             transform.localScale = Vector3.zero;
-            // transform.DOScale(Vector3.one, 0.5f)
-                    //  .SetEase(Ease.OutBack)
-                    //  .SetDelay(transform.GetSiblingIndex() * 0.25f)
-                    //  .OnComplete(Idle);
         }
-
-        // public void SetValues(string text, float width = 200f)
-        // {
-        //     label.text = text;
-        //     Vector2 sizeDelta = rectTransform.sizeDelta;
-        //     float labelWidth = LayoutUtility.GetPreferredWidth(label.rectTransform);
-        //     sizeDelta.x = (width > labelWidth) ? width : labelWidth;
-        //     rectTransform.sizeDelta = sizeDelta;
-        //     collider2D.size = rectTransform.rect.size;
-        // }
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            // if (!isIdle)
-            // {
-            //     return;
-            // }
             offset = (Vector2)transform.position - eventData.position;
             originalPos = transform.position;
         }
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            // if (!isIdle || activeDraggable != null || !canvasGroup.interactable)
-            // {
-            //     return;
-            // }
-            // DOTween.Kill(transform);
             transform.localScale = Vector3.one * 1.2f;
             activeDraggable = this;
-            canvasGroup.blocksRaycasts = false;
-            canvasGroup.alpha = 0.5f;
+            MyCanvasGroup.blocksRaycasts = false;
+            MyCanvasGroup.alpha = 0.5f;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -116,19 +91,16 @@ namespace Classroom.NewUtil
             // {
             //     return;
             // }
-            rigidbody2D.MovePosition(eventData.position + offset);
+            MyRigidbody2D.MovePosition(eventData.position + offset);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            // if (!isIdle || activeDraggable == null || !canvasGroup.interactable)
-            // {
-            //     return;
-            // }
             activeDraggable = null;
-            canvasGroup.blocksRaycasts = true;
-            canvasGroup.alpha = 1f;
+            MyCanvasGroup.blocksRaycasts = true;
+            MyCanvasGroup.alpha = 1f;
             isIdle = false;
+            
             // Sequence sequence = DOTween.Sequence();
 
             // if (returnToOriginOnFalse)
@@ -160,6 +132,7 @@ namespace Classroom.NewUtil
         {
             float tempYPos = transform.position.y + 5f;
             isIdle = true;
+            
             // transform.DOMoveY(tempYPos, Random.Range(0.95f, 1.05f)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         }
 
