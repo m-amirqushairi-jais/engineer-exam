@@ -2,6 +2,46 @@
 # Client Engineer Examination: Unity Physics
 > Created By Mohd Naim Shah
 
+## Task 2: MLRS vs CIWS (Implementation)
+
+1.  **Scene Setup:**
+    
+    -   Setup 3D tank battle scene using UnityTankTutorial template (only import some of the necessary materials)
+        
+    -   Blue Tank (Player 1) & Red Tank (Player 2)
+      
+        - Input Description included
+  
+    -   Project Settings:
+    
+        -   Multiple axis controller to accomodate P1 vs P2 interaction
+        -   URP lighting setup
+        -   Created object layers to control OnTrigger interactions between different game object
+        -   Object layers critical for Homing Missile, Anti Missile Shell, Effective Range and Turret Auto Tracking behavior
+  
+    -   Folder Managements:
+    
+        -   Modified & built from scratch codes and prefabs placed inside "Asset/Engineer Exam" folder
+        
+    
+2.  **Game Logics & Features:**
+    
+    -   Added initial missile launch animation to give it some attitude and character
+      
+        - Missile move along a bezier curve for a few seconds before propelled toward target
+        
+    -   Auto Tracking Turret
+      
+        - Begin AutoTrack in effective range (Refer "Turret" gameobject in each tank child game object to find the script used)
+  
+    -   Multiple Shell Types Prefabs:
+    
+        -   Missile: Homing missile, target only enemy tank (P2), turning speed and velocity can be adjusted
+        -   Anti Missile: Fast moving shell only affect Missile (filter using object layer)
+        -   CompleteShell (original from template asset): Basically a canon
+  
+------------------------------------------
+
 This examination assesses your fundamental Unity development abilities and your capability to replicate physics scenarios.
 
 ## Task 3: MLRS vs CIWS
