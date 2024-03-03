@@ -1,6 +1,7 @@
 
 # Client Engineer Examination
 > Created By Muhammad Amir Qushairi Jais
+
 > Updated By Mohammad Alwi Yahaya
 
 **Unity Project Setups**
@@ -9,16 +10,22 @@
 
 **Summary of Completed Tasks**
 -  **Task1:**  API Integration Scene
-  > Use 2 types of API data collection from OpenWeatherMap API
+  > Use 2 types of API data collection from OpenWeatherMap AP
+
   > Correctly fetch location based on zip code and country code
+
   > Using fetched location data, retrieve current weather data 
 -  **Task2:**  Spirograph
   > Able to animate spirograph draw patten over time
+
   > Spirograph values can be change on editor
 -  **Task3:**  MLRS vs CIWS
   > Setup 3D tank battle scene using UnityTankTutorial template (only import some of the necessary materials)
+
   > Can be played by 2 players
+
   > Player 1 equipped with MLRS
+
   > Player 2 equipped with CIWS
 
 **Detailed Implementation of Each Task Is Written Under Each Task's Readme**
