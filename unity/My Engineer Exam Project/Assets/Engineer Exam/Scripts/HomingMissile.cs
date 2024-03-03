@@ -24,14 +24,14 @@ public class HomingMissile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+
     }
 
-    public void InitReference(Transform _spawnPoint, Transform _controlPoint, Transform _tempTargetPoint, Transform _target)
+    public void InitReference(Transform _launchPath, Transform _target)
     {
-        spawnPoint = _spawnPoint;
-        controlPoint = _controlPoint;
-        tempTargetPoint = _tempTargetPoint;
+        spawnPoint = _launchPath.GetChild(0).transform;
+        controlPoint = _launchPath.GetChild(1).transform;
+        tempTargetPoint = _launchPath.GetChild(2).transform;
         target = _target;
 
         initialPosition = spawnPoint.position;
@@ -115,20 +115,23 @@ public class HomingMissile : MonoBehaviour
     // Draw the Bezier curve as Gizmo
     void OnDrawGizmos()
     {
-        initialPosition = spawnPoint.position;
-        controlPosition = controlPoint.position;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(initialPosition, controlPosition);
-        Gizmos.DrawLine(controlPosition, tempTargetPoint.position);
-
-        Gizmos.color = Color.green;
-        Vector3 lastPoint = initialPosition;
-        for (float t = 0.05f; t <= 1; t += 0.05f)
+        if (spawnPoint)
         {
-            Vector3 nextPoint = BezierCurve(initialPosition, controlPosition, tempTargetPoint.position, t);
-            Gizmos.DrawLine(lastPoint, nextPoint);
-            lastPoint = nextPoint;
+            initialPosition = spawnPoint.position;
+            controlPosition = controlPoint.position;
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(initialPosition, controlPosition);
+            Gizmos.DrawLine(controlPosition, tempTargetPoint.position);
+
+            Gizmos.color = Color.green;
+            Vector3 lastPoint = initialPosition;
+            for (float t = 0.05f; t <= 1; t += 0.05f)
+            {
+                Vector3 nextPoint = BezierCurve(initialPosition, controlPosition, tempTargetPoint.position, t);
+                Gizmos.DrawLine(lastPoint, nextPoint);
+                lastPoint = nextPoint;
+            }
         }
     }
 }

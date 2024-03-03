@@ -102,7 +102,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2560
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -215,13 +215,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TankMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 192
   m_ExplosionParticles: {fileID: 198540207889710882}
   m_ExplosionAudio: {fileID: 82110601301053950}
-  m_MaxDamage: 100
-  m_ExplosionForce: 1000
+  m_MaxDamage: 10
+  m_ExplosionForce: 50
   m_MaxLifeTime: 2
-  m_ExplosionRadius: 5
+  m_ExplosionRadius: 2
 --- !u!114 &-8898979377520575551
 MonoBehaviour:
   m_ObjectHideFlags: 0
