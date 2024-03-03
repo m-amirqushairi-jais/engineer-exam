@@ -2,6 +2,47 @@
 # Client Engineer Examination: Unity and API Integration
 > Created By Muhammad Amir Qushairi Jais & Sharif Tariq
 
+> Updated By Mohammad Alwi Yahaya
+
+## Task 1: API Integration Scene (Implementation)
+
+1.  **Chosen API:**
+    
+    -   OpenWeatherMap:  [https://openweathermap.org/api](https://openweathermap.org/api))
+        
+    -   Data 1: Geocoding data:
+      
+        - Prameters used: zipcode, country code, apikey
+          
+        - Points used: name (location name), country (country name), lat, lon (used as latitude/longitude parameter to fetch CurrentWeather data) 
+  
+    -   Data 2: CurrentWeather data:
+    
+        -   Parameters used: lat, lon, units, apikey
+        
+        -   Endpoints used: name (location name), main[0] (weather condition, possible for multiple condition), description, humidity, speed(wind speed), temp (temperature)
+    
+2.  **Unity Scene Setup:**
+    
+    -   Made simple request button for each data
+    -   Fetched data displayed using TextMeshPro GUI Text
+    -   Must get geocoding data first (no interaction flow check implemented)
+    
+3.  **API Interaction:**
+    
+    -   Written in a single C# script
+    -   If given extra time, would have created input form and include API key encryption method
+        
+    
+4.  **Error Handling:**
+    
+    -   Implement basic error handling for:
+        
+        -   Network connectivity issues
+        -   Invalid or unexpected API responses (not tested)
+     
+-------------------------------------------------------------
+
 This examination evaluates your core Unity development skills and the ability to integrate external data sources using APIs.
 
 ## Task 1: API Integration Scene
