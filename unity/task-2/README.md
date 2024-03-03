@@ -2,6 +2,31 @@
 # Client Engineer Examination: Unity Graphics
 > Created By Mohd Naim Shah
 
+> Updated By Mohammad Alwi Yahaya
+
+## Task 2: Spirograph (Implementation)
+
+1.  **Codes and Reference:**
+    
+    -   Reference:  [https://www.instructables.com/The-Math-Behind-a-Spirograph/](https://www.instructables.com/The-Math-Behind-a-Spirograph/)
+        
+    -   Code Implementation:
+      
+        - Begin draw on Start
+          
+        - On Fixed Update, add new points based on angle and time rate 
+  
+    -   Manipulation capabilities:
+    
+        -   Update parameters using editor inspector
+        
+    
+2.  **Unity UI:**
+    
+    -   In Progress
+  
+------------------------------------------
+
 This examination evaluates your core Unity development skills and the ability to visualize math equations.
 
 ## Task 2: Spirograph
