@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Engineer Exam/Scenes/START HERE.unity
+    guid: 79f93fd345db4c144be9b6baa44bd7af
+  - enabled: 1
+    path: Assets/Engineer Exam/Scenes/Task 1 Api Handling.unity
+    guid: dbda47add71df7740a84eeef5c035f34
+  - enabled: 1
+    path: Assets/Engineer Exam/Scenes/Task 2 Spirograph.unity
+    guid: a8bbcb42a570033479ab5e4fec0f5be2
+  - enabled: 1
+    path: Assets/Engineer Exam/Scenes/Task 3 Tank Battle.unity
+    guid: dbf89e2ae3151c34680d152d65aa3c26
+  m_configObjects: {}
