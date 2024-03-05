@@ -9,6 +9,7 @@
 1.  **Chosen API:**
     
     -   OpenWeatherMap:  [https://openweathermap.org/api](https://openweathermap.org/api))
+    -   Use this API key: 7f3b9e93fc3156d761a240d3b4ac2d38
         
     -   Data 1: Geocoding data:
       
@@ -24,7 +25,8 @@
     
 2.  **Unity Scene Setup:**
     
-    -   Made simple request button for each data
+    -   Updated with input fields that require user to enter zip code and country code
+    -   Create proper ui flow for requesting api data
     -   Fetched data displayed using TextMeshPro GUI Text
     -   Must get geocoding data first (no interaction flow check implemented)
     
