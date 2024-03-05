@@ -12,7 +12,9 @@
 1.  **Task1:**  API Integration Scene
      - Use 2 types of API data collection from OpenWeatherMap AP
      - Correctly fetch location based on zip code and country code
-     - Using fetched location data, retrieve current weather data 
+     - Using fetched location data, retrieve current weather data
+     - Create UI to input zipcode and country code before proceeding to request api data
+     - API key now need to fill in inside inspector
 2.  **Task2:**  Spirograph
      - Able to animate spirograph draw patten over time
      - Spirograph values can be change on editor
