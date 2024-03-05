@@ -2,6 +2,8 @@
 # Client Engineer Examination: Unity Physics
 > Created By Mohd Naim Shah
 
+> Updated By Mohammad Alwi Yahaya
+
 ## Task 2: MLRS vs CIWS (Implementation)
 
 1.  **Scene Setup:**
@@ -33,6 +35,12 @@
     -   Auto Tracking Turret
       
         - Begin AutoTrack in effective range (Refer "Turret" gameobject in each tank child game object to find the script used)
+        
+    -   Missile Launcher setup
+      
+        - Select "My Tank" GameObject and look for HomingMissile component
+        - You may modify how many missiles to launch at one time
+        - Each missile have adjustable spawn position offset to get desired initial spawn formation
   
     -   Multiple Shell Types Prefabs:
     
