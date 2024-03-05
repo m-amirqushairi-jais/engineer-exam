@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
+using System;
 
 /*
 OPENWEATHERMAP REFERENCE
@@ -17,7 +18,8 @@ https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API k
 public class WeatherMapMain : MonoBehaviour
 {
     // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
-    private const string apiKey = "7f3b9e93fc3156d761a240d3b4ac2d38";
+    [SerializeField]
+    private string apiKey = "Enter your OpenWeatherMap API key";
     private const string geoApiUrl = "http://api.openweathermap.org/geo/1.0/zip";
     private const string weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
@@ -36,6 +38,16 @@ public class WeatherMapMain : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void AssignZipCode(String z)
+    {
+        zipCode = z;
+    }
+
+    public void AssignCountryCode(String c)
+    {
+        countryCode = c;
     }
 
     public void SubmitRequestGeoData()
@@ -58,6 +70,7 @@ public class WeatherMapMain : MonoBehaviour
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
             {
+                tmpTextGUI_geoData.text = webRequest.error;
                 Debug.LogError($"Error: {webRequest.error}");
             }
             else
@@ -66,8 +79,7 @@ public class WeatherMapMain : MonoBehaviour
                 string json = webRequest.downloadHandler.text;
                 MyGeoCodeData = JsonUtility.FromJson<GeoCodeData>(json);
 
-                tmpTextGUI_geoData.text = "MyGeoCodeData:" + 
-                    "\nZip Code: " + MyGeoCodeData.zip +
+                tmpTextGUI_geoData.text = "Zip Code: " + MyGeoCodeData.zip +
                     "\nLocation: " + MyGeoCodeData.name +
                     "\nLatitude: " + MyGeoCodeData.lat +
                     "\nLongitude: " + MyGeoCodeData.lon +
@@ -86,6 +98,7 @@ public class WeatherMapMain : MonoBehaviour
 
             if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
             {
+                tmpTextGUI_weatherData.text = webRequest.error;
                 Debug.LogError($"Error: {webRequest.error}");
             }
             else
@@ -95,8 +108,7 @@ public class WeatherMapMain : MonoBehaviour
                 WeatherData MyWeatherData = JsonUtility.FromJson<WeatherData>(json);
 
                 // Access the weather data as needed                
-                tmpTextGUI_weatherData.text = "Weather Data:" + 
-                    "\nLocation: " + MyGeoCodeData.name +
+                tmpTextGUI_weatherData.text = "Location: " + MyGeoCodeData.name +
                     "\nWeather: " + MyWeatherData.weather[0].main +
                     "\nDescription: " + MyWeatherData.weather[0].description +
                     "\nTemperature: " + MyWeatherData.main.temp +
